@@ -2,8 +2,7 @@
 
 ## Algorithm:
 
-![](./Any-to-Any-Converter-1.jpg?raw=true)
-
+![Algo](./Any-to-Any-Converter-1.jpg?raw=true)
 
 ## TODO:
 

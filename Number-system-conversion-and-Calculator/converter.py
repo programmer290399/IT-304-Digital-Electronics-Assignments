@@ -9,51 +9,6 @@ class NumberSystemConverter:
     :param int input_base: The base of the input_num
     :param int/float input_num: Number to be converted to other base
     :param int target_base: Base in which input_num is to be converted
-
-
-    Algorithm :
-
-        Step 0 . Check whether the number has a fractional part or not , if it has no fractional part then use the
-            following algorithm (otherwise go to Step 1) :
-
-            Step 0.1 . Convert input number to decimal using the following algorithm :
-
-                Step 0.1.1 − Determine the column (positional) value of each digit (this depends on the position of the
-                        digit and the base of the number system).
-
-                Step 0.1.2 − Multiply the obtained column values (in Step 1) by the digits in the corresponding columns.
-
-                Step 0.1.3 − Sum the products calculated in Step 2. The total is the equivalent value in decimal.
-
-
-            Step 0.2 . Convert the decimal number to required base using the following algorithm :
-
-                Step 0.2.1 − Divide the decimal number to be converted by the value of the new base.
-
-                Step 0.2.2 − Get the remainder from Step 1 as the rightmost digit (least significant digit) of new base
-                    number.
-
-                Step 0.2.3 − Divide the quotient of the previous divide by the new base.
-
-                Step 0.2.4 − Record the remainder from Step 3 as the next digit (to the left) of the new base number.
-
-                Repeat Steps 0.2.3 and 0.2.4, getting remainders from right to left, until the quotient becomes zero in
-                Step 3.
-                The last remainder thus obtained will be the Most Significant Digit (MSD) of the new base number.
-
-        Step 1 . Follow the same algorithm as above to convert the integer part of the number to desired base and to
-            convert the fractional part use following algorithm :
-
-            Step 1.1 - Convert the fractional part to it's decimal equivalent fraction by using Steps 0.1.1.- 0.1.3
-
-            Step 1.2 - Multiply the decimal equivalent of the fractional part with target base
-
-            Step 1.3 - Append the whole part of the product obtained to target base fractional part and reassign decimal
-                equivalent of the fractional part to be the fractional part of the product obtained in the step above
-
-            Repeat steps 1.2 and 1.3 until the fractional part of decimal equivalent becomes zero or the iteration limit
-            (here 10) is exceeded.
-        
     """
 
     def __init__(self, input_base, input_num, target_base):
